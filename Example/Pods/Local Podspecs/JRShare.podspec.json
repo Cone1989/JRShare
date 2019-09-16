@@ -1,0 +1,47 @@
+{
+  "name": "JRShare",
+  "version": "0.1.0",
+  "summary": "A short description of JRShare.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Cone1989/JRShare",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liqiang": "liqiang38@58.com"
+  },
+  "source": {
+    "git": "../JRShare",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JRShare/Classes/*.{h,m}",
+  "frameworks": [
+    "SystemConfiguration",
+    "CoreTelephony"
+  ],
+  "libraries": [
+    "c++",
+    "z",
+    "sqlite3.0"
+  ],
+  "requires_arc": true,
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "subspecs": [
+    {
+      "name": "QQ",
+      "source_files": "JRShare/Classes/qq/**/*",
+      "vendored_frameworks": "JRShare/Classes/qq/sdk/*.{framework}"
+    },
+    {
+      "name": "Wechat",
+      "source_files": "JRShare/Classes/wechat/**/*",
+      "vendored_libraries": "JRShare/Classes/wechat/sdk/*.{a}"
+    }
+  ]
+}

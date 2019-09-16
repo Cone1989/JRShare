@@ -7,7 +7,7 @@
 //
 
 #import "JRViewController.h"
-
+#import <IQShare.h>
 @interface JRViewController ()
 
 @end
@@ -17,6 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[IQShare defaultShare] registerAppId:@"xx" platform:IQSharePlatformWechat];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

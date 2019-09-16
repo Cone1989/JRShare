@@ -1,0 +1,6 @@
+framework module JRShare {
+  umbrella header "JRShare-umbrella.h"
+
+  export *
+  module * { export * }
+}
