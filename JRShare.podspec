@@ -30,7 +30,7 @@ s.source           = { :git => 'https://github.com/Cone1989/JRShare.git', :tag =
 
 s.ios.deployment_target = '8.0'
 
-s.public_header_files 'JRShare/Classes/IQShare.h'
+s.public_header_files = 'JRShare/Classes/IQShare.h'
 #s.source_files = 'JRShare/Classes/*.{h,m}'
 
 s.subspec 'Share' do |share|
@@ -39,13 +39,13 @@ end
 
 s.subspec 'QQ' do |qq|
     qq.source_files = 'JRShare/Classes/qq/**/*'
-    qq.dependency   = 'JRShare/Share'
+    qq.dependency 'JRShare/Share'
     qq.vendored_frameworks = 'JRShare/Classes/qq/sdk/*.{framework}'
 end
 
 s.subspec 'Wechat' do |wx|
     wx.source_files = 'JRShare/Classes/wechat/**/*'
-    wx.dependency   = 'JRShare/Share'
+    wx.dependency 'JRShare/Share'
     wx.vendored_libraries = 'JRShare/Classes/wechat/sdk/*.{a}'
 end
 
